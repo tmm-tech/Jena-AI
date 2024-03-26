@@ -20,17 +20,17 @@ Jena is an advanced personal assistant system designed to enhance productivity a
 ## Installation
 
 1. **Clone the repository**: 
-   - `git clone https://github.com/tmm-tech/Jena-AI.git`
+- `git clone https://github.com/tmm-tech/Jena-AI.git`
 2.  **Install dependencies**:
-    - `cd assistease-backend`
-    - `pip install -r requirements.txt`
+- `cd assistease-backend`
+- `pip install -r requirements.txt`
 3. **Start the Backend server**:
-   - `python manage.py runserver`
+- `python manage.py runserver`
 4. **Install Frontend dependencies**:
-   - `cd jena-frontend`
-   - `npm install`
+- `cd jena-frontend`
+- `npm install`
 5. **Start the frontend development server**:
-   - `npm start`
+- `npm start`
 6. **Access the application at** `http://localhost:3000` **in your web browser.**
 
 ## Contributing
