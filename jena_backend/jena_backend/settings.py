@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'jena_backend.wsgi.application'
 DATABASES = {
  'default': {
         'ENGINE': 'djongo',
-        'NAME': '    jenaDB',
+        'NAME': os.getenv('MONGO_DB'),
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'host': 'mongodb://localhost:27017',
+            'host': os.getenv('MONGO_HOST'),
             'username': os.getenv('MONGO_USERNAME'),  # If you use authentication
             'password': os.getenv('MONGO_PASSWORD'),  # If you use authentication
             'authSource': 'admin',
