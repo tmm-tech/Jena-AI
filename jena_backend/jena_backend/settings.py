@@ -89,6 +89,7 @@ DATABASES = {
             'host': os.getenv('MONGO_HOST'),
             'username': os.getenv('MONGO_USERNAME'),  # If you use authentication
             'password': os.getenv('MONGO_PASSWORD'),  # If you use authentication
+            'port': os.getenv('MONGO_PORT'),
             'authSource': 'admin',
             'authMechanism': 'SCRAM-SHA-256',
         },
