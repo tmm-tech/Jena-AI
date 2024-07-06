@@ -36,7 +36,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'jena',
-    'djongo',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -79,20 +78,14 @@ WSGI_APPLICATION = 'jena_backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
 DATABASES = {
- 'default': {
-        'ENGINE': 'djongo',
-        'NAME': os.getenv('MONGO_DB'),
-        'ENFORCE_SCHEMA': False,
-        'CLIENT': {
-            'host': os.getenv('MONGO_HOST'),
-            'username': os.getenv('MONGO_USERNAME'),  # If you use authentication
-            'password': os.getenv('MONGO_PASSWORD'),  # If you use authentication
-            'port': os.getenv('MONGO_PORT'),
-            'authSource': 'admin',
-            'authMechanism': 'SCRAM-SHA-256',
-        },
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('POSTGRE_DB'),
+        'USER': os.getenv('POSTGRE_USER'),
+        'PASSWORD': os.getenv('POSTGRE_PASSWORD'),
+        'HOST': os.getenv('POSTGRE_HOST'),
+        'PORT':int(os.getenv('POSTGRE_PORT')),
     }
 }
 
