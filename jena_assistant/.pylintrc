@@ -1,0 +1,5 @@
+[MASTER]
+load-plugins = pylint_django
+
+[TYPECHECK]
+ignored-classes = django.db.models.fields.related.ManyToManyField
